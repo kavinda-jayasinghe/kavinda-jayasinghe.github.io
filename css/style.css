@@ -59,8 +59,15 @@ header nav a:hover{
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    padding: 3rem 0 0 6rem;
 }
+.hero h1{
+        margin-bottom: 4rem;
+          font-size: 64px;
+    font-weight: 700;
+    line-height: 56px;
+        color: #1f5297;
+    }
 
 .hero-text h4{
     color: #fdc435;
@@ -121,7 +128,6 @@ h2{
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .about-text{
@@ -135,7 +141,8 @@ h2{
 }
 
 .about-img{
-    width: 100%;
+    width: 30%;
+    height: 30%;
 }
 
 .about-img img{
@@ -186,8 +193,9 @@ footer{
     padding: 8rem 0;
 }
 
-footer .social-media{
+ .social-media{
     display: flex;
+    justify-content:center;
     gap: 3rem;
     margin-bottom: 1.5rem;
     font-size: 4rem;
@@ -293,9 +301,42 @@ footer .social-media{
     box-shadow: 0.5rem 0.5rem 3rem rgba(0,0,0,0.05);
 }
 
+/* skill */
+.skills{
+width: 100%;
+}
+
+.skills-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+}
+.icon{
+    font-size: 50px;
+    color: #1f5297;
+    transition: transform 0.5s ease;
+}
+.icon:hover{
+    color: #000000;
+      transform: scale(1.1);
+}
+.skill{
+    margin: 3rem 0 3rem 0;
+    gap: 2rem;
+    display: flex;
+    height: 30px;
+    align-items: center;
+}
+
 /* Media Queries */
 
 @media only screen and (max-width: 768px) {
+
+    .skills-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+}
     html{
         font-size: 58%;
     }
@@ -306,9 +347,18 @@ footer .social-media{
         line-height: 2;
         word-spacing: 1rem;
     }
-    .hero-img{
-        display: none;
-    }
+.about-img{
+    width: 50%;
+    margin: 0 auto;
+
+}
+.hero{
+    padding: 0 2rem;
+}
+.hero h1{
+    font-size: 30px;
+    text-align: center;
+}
     .about-container{
         flex-direction: column;
     }
@@ -331,4 +381,15 @@ footer .social-media{
     header{
         padding: 2rem;
     }
+
+    .skills-container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+
 }
+.skill{
+    margin: 1rem 0 3rem 0;
+}
+}
+
+
